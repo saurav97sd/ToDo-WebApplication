@@ -9,6 +9,8 @@ const homeController = require('../controllers/home_controller');
 
 //setting the action for route
 router.get('/', homeController.home);
+//For any route other than '/' use this
+router.use('/users', require('./users'));
 
 //exporting it to be used by server.js
 module.exports = router;
