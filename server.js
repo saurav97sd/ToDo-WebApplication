@@ -4,12 +4,12 @@ const express = require('express');
 //port on which server will run
 const port = 8000;
 
+//Firing the express
+const app = express();
+
 //Set up view engine and show the path to the view folder
 app.set('view engine', 'ejs');
 app.set('views', './views');
-
-//Firing the express
-const app = express();
 
 //use express routers
 app.use('/', require('./routes/index'));
