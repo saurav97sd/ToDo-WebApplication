@@ -6,6 +6,9 @@ const port = 8000;
 //-----------------------Adding the ODM---------------------------------------
 const db = require('./configs/mongoose');
 
+//-----------------------adding the schema------------------------------------
+const ToDo = require('./models/todo');
+
 //Firing the express
 const app = express();
 
