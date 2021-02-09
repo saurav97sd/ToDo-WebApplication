@@ -7,6 +7,9 @@ const port = 8000;
 //Firing the express
 const app = express();
 
+// Parshing data from the form
+app.use(express.urlencoded());
+
 // Telling server to access the assets folder to get static files
 app.use(express.static('./assets'));
 
@@ -16,6 +19,7 @@ app.set('views', './views');
 
 //use express routers
 app.use('/', require('./routes'));
+
 
 //listening to the port on the server is running
 app.listen(port, function(err){

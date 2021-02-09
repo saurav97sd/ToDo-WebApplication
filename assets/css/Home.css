@@ -5,6 +5,7 @@ body{
 	text-align: center;
 	background: rgb(240,17,10);
 	background: linear-gradient(129deg, rgba(240,17,10,1) 0%, rgba(233,114,2,1) 41%, rgba(241,213,87,1) 100%);
+	overflow-x: hidden;
 }
 
 /*styling header*/
@@ -152,6 +153,11 @@ form .buttons{
 	align-items: center;
 	font-family: 'Lobster', cursive;
 }
+.list-content{
+	display: flex;
+	flex-direction: flex-start;
+	flex-wrap: wrap;
+}
 .checkbox{
 	font-size: 1.3rem;
 }
@@ -159,6 +165,7 @@ form .buttons{
 	font-size: 2rem;
 }
 .due-date{
+	width: 100%;
 	display: flex;
 	padding-left: 3rem;
 	color: lightgrey;

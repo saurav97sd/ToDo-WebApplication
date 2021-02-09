@@ -55,7 +55,7 @@
 						<span>&nbsp;&nbsp;Add Task</span>
 					</button>
 
-					
+					<!-- Using formaction attribute to use two buttons differently -->
 					<button type="submit" class="delete-button" formaction="./users/profile">
 						<i class="fas fa-trash"></i>
 						<span>&nbsp;&nbsp;Delete Task</span>
@@ -73,7 +73,7 @@
                     <div class="list-content">
                         <div class="checkbox">
                             <input type="checkbox" name="todo" value="Why not add a task ?">
-                            <span>&ensp;&ensp;<%= i.msg %></span>
+                            <span>&ensp;&ensp;<%= i.description %></span>
                         </div>
                         <footer class="due-date">
                             <i class="far fa-calendar-alt"></i>
