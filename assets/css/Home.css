@@ -1,0 +1,165 @@
+/*Removing the default margin and getting all text at center*/
+body{
+	color: white;
+	margin: 0;
+	text-align: center;
+	background: rgb(240,17,10);
+	background: linear-gradient(129deg, rgba(240,17,10,1) 0%, rgba(233,114,2,1) 41%, rgba(241,213,87,1) 100%);
+}
+
+/*styling header*/
+header{
+	font-family: 'Lemonada', cursive;
+	font-size: 3rem;
+	font-weight: bold;
+	margin: 2rem 0;
+	padding-bottom: 1.6rem;
+	height: 4rem;
+	border-bottom: 1px solid white;
+	display:flex;
+	justify-content: center;
+	align-items: center;
+}
+/*changing the color of placeholder*/
+::placeholder{
+	color: lightgray;
+	font-family: 'Lobster', cursive;
+}
+/*form div label, input{
+	display: block;
+}*/
+
+/*Styling the description container*/
+form .description-container{
+	height: 6rem;
+	margin: 1rem 0;
+	padding: 0 1rem;
+	border-bottom: 1px solid white;
+	display: flex;
+	flex-direction: flex-start;
+	flex-wrap: wrap;
+}
+form .description-container input{
+	width: 100%;
+	height: 3rem;
+	font-size: 1.5rem;
+	margin-bottom: 1rem;
+	border-style: none;
+	outline: none;
+	background: transparent;
+	color: lightgrey;
+	font-family: 'Lobster', cursive;
+}
+
+/*Styling the container of category and date*/
+form .category-date-container{
+	height: 6rem;
+	width: 100%;
+	margin: 1rem 0;
+	padding: 0 1rem;
+	border-bottom: 1px solid white;
+	display: flex;
+	flex-direction: flex-start;
+}
+form label{
+	font-weight: bold;
+}
+.category{ /*Styling the category div*/
+	width: 50%;
+	display: flex;
+	flex-direction: flex-start;
+	border-right: 1px solid white;
+	margin-bottom: 1rem;
+	padding-right: 1rem;
+	flex-wrap: wrap;
+}
+.category select{
+	width: 100%;
+	height: 3rem;
+	font-size: 1.5rem;
+	font-family: 'Lobster', cursive;
+	border-style: none;
+	outline: none;
+	color: lightgrey;
+	background: transparent;
+}
+.date{ /*Styling the date div*/
+	width: 50%;
+	display: flex;
+	flex-direction: flex-start;
+	flex-wrap: wrap;
+	margin-bottom: 1rem;
+	padding-left: 1rem;
+	padding-right: 4rem;
+}
+.date input{
+	width: 100%;
+	height: 3rem;
+	font-size: 1.5rem;
+	font-family: 'Lobster', cursive;
+	border-style: none;
+	outline: none;
+	color: lightgrey;
+	background: transparent;
+}
+
+
+/*Styling the button*/
+form .buttons{
+	margin: 3rem 0;
+}
+.buttons .add-button{
+	width: 10rem;
+	height: 3rem;
+	background-color: #444444;
+	font-size: 1rem;
+	font-weight: bold;
+	color: white;
+	border-style: none;
+	border: 2px solid #444444;
+	border-radius: 20px;
+	margin-right: 0.5rem;
+	cursor: pointer;
+	outline: none;
+}
+.buttons .delete-button{
+	width: 10rem;
+	height: 3rem;
+	background-color: #ee351e;
+	font-size: 1rem;
+	font-weight: bold;
+	color: white;
+	border-style: none;
+	border: 2px solid #ee351e;
+	border-radius: 20px;
+	cursor: pointer;
+	outline: none;
+}
+
+
+/*Styling the list*/
+.unordered-list{
+	list-style: none;
+	margin: 0 3rem;
+	padding: 0;
+}
+.unordered-list .list-item{
+	border-top: 1px solid white;
+	height: 4rem;
+	padding: 1rem 0.5rem;
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	font-family: 'Lobster', cursive;
+}
+.checkbox{
+	font-size: 1.3rem;
+}
+.checkbox input{
+	font-size: 2rem;
+}
+.due-date{
+	display: flex;
+	padding-left: 3rem;
+	color: lightgrey;
+}
