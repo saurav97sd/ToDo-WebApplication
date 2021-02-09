@@ -7,6 +7,9 @@ const port = 8000;
 //Firing the express
 const app = express();
 
+// Telling server to access the assets folder to get static files
+app.use(express.static('./assets'));
+
 //Set up view engine and show the path to the view folder
 app.set('view engine', 'ejs');
 app.set('views', './views');
