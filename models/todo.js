@@ -17,6 +17,6 @@ const todoSchema = new mongoose.Schema({
 });
 
 //Giving name to the collection
-const ToDo = mongoose.model('ToDo', todoSchema);
+const TD = mongoose.model('ToDo', todoSchema);
 
-module.exports = ToDo;
+module.exports = TD;
