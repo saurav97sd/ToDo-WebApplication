@@ -1,8 +1,10 @@
 //Require Express
 const express = require('express');
-
 //port on which server will run
 const port = 8000;
+
+//-----------------------Adding the ODM---------------------------------------
+const db = require('./configs/mongoose');
 
 //Firing the express
 const app = express();
