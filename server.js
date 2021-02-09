@@ -15,8 +15,7 @@ app.set('view engine', 'ejs');
 app.set('views', './views');
 
 //use express routers
-app.use('/', require('./routes/index'));
-
+app.use('/', require('./routes'));
 
 //listening to the port on the server is running
 app.listen(port, function(err){

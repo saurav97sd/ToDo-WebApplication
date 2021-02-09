@@ -2,8 +2,8 @@ const express = require('express');
 const router = express.Router();
 
 //Accessing the controller
-const usersController = require('../controllers/users_controller');
+const addController = require('../controllers/add_controller');
 //using the controller for a route
-router.post('/profile', usersController.profile);
+router.post('/todo', addController.todo);
 
 module.exports = router;
