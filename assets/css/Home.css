@@ -145,7 +145,7 @@ form .buttons{
 /*Styling the list*/
 .unordered-list{
 	list-style: none;
-	margin: 2rem 3rem 0;
+	margin: 2rem 18rem 0;
 	padding: 0;
 }
 .unordered-list .list-item{
@@ -154,6 +154,7 @@ form .buttons{
 	padding: 1rem 0.5rem;
 	display: flex;
 	flex-wrap: wrap;
+	justify-content: space-between;
 	align-items: center;
 	font-family: 'Lobster', cursive;
 }
@@ -171,6 +172,33 @@ form .buttons{
 .due-date{
 	width: 100%;
 	display: flex;
-	padding-left: 3rem;
+	margin-top: 0.5rem;
+	padding-left: 0.2rem;
 	color: rgb(22, 21, 21);
+}
+
+.category-display{
+	color: black;
+	/* margin-right: 3rem; */
+	border-radius:20px;
+	font-size: 1rem;
+	padding: 0.3rem 0.5rem;	
+}
+
+
+
+/* color classes  for the categories*/
+#Home{
+	background-color:greenyellow;
+}
+#Personal{
+	background-color: rgb(137, 35, 233);
+	color: white;
+}
+#Work{
+	background-color: black;
+	color: white;
+}
+#University{
+	background-color: rgb(255, 255, 0);
 }

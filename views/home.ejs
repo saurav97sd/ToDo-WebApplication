@@ -38,7 +38,7 @@
 							<option value="Personal">Personal</option>
 							<option value="Home">Home</option>
 							<option value="Work">Work</option>
-							<option value="School">School</option>
+							<option value="University">University</option>
 						</select>
 					</div>
 					
@@ -50,7 +50,7 @@
 				</div>
 				<!-- Buttons -->
 				<div class="buttons">
-					<button type="submit" class="add-button">
+					<button type="submit" class="add-button" id="add">
 						<i class="fas fa-plus"></i>
 						<span>&nbsp;&nbsp;Add Task</span>
 					</button>
@@ -78,7 +78,9 @@
 											<span>&ensp;<%= i.date %></span>
 										</footer>
 									</div>
-									<div></div>
+									<div class="category-display" id="<%= i.category %>">
+										<%= i.category %>
+									</div>
 								</li>
 				
 							<%}%>

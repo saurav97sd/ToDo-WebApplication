@@ -8,6 +8,8 @@ $(document).ready(function(){
         sendResponse(item);
       }
    });
+
+
     function sendResponse(item) {
       $.ajax({
         type:'post',
@@ -19,3 +21,5 @@ $(document).ready(function(){
       });
     }
   });
+
+
