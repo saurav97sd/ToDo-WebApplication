@@ -27,7 +27,7 @@
 				<div class="description-container">
 					<label for="description">DESCRIPTION</label>
 					<br>
-					<input type="text" name="description" id="description" placeholder="What do you neeed to do?" required>
+					<input type="text" name="description" id="description" autocomplete="off" placeholder="What do you neeed to do?" >
 				</div>
 				<!-- Choose category and date -->
 				<div class="category-date-container">
@@ -44,7 +44,7 @@
 					
 					<div class="date">
 						<label>DUE DATE</label>
-						<input type="date" id="start" name="date" placeholder="dd/mm/yyyy" required>
+						<input type="date" id="start" name="date" placeholder="dd/mm/yyyy" >
 					</div>
 					
 				</div>
@@ -56,34 +56,44 @@
 					</button>
 
 					<!-- Using formaction attribute to use two buttons differently -->
-					<button type="submit" class="delete-button" formaction="./users/profile">
-						<i class="fas fa-trash"></i>
-						<span>&nbsp;&nbsp;Delete Task</span>
-					</button>
+					
+					<!-- Unorder list to show -->
+					<form action="/delete/todo" action="post">
+						<button type="submit" class="delete-button" formaction="./delete/todo" id="delete">
+							<i class="fas fa-trash"></i>
+							<span>&nbsp;&nbsp;Delete Task</span>
+						</button>
+
+						<ul class="unordered-list">
+							<%for(let i of todo){%>
+				
+								<li class="list-item">
+									<div class="list-content">
+										<div class="checkbox">
+											<input type="checkbox" name="todo" id="<%= i._id %>" value="<%= i._id %>"
+											<span>&ensp;&ensp;<%= i.description %></span>
+										</div>
+										<footer class="due-date">
+											<i class="far fa-calendar-alt"></i>
+											<span>&ensp;<%= i.date %></span>
+										</footer>
+									</div>
+									<div></div>
+								</li>
+				
+							<%}%>
+						</ul>
+					</form>
 					
 				</div>
 			</section>
 		</form>
 
-		<!-- Unorder list to show -->
-		<ul class="unordered-list">
-            <%for(let i of todo){%>
-
-                <li class="list-item">
-                    <div class="list-content">
-                        <div class="checkbox">
-                            <input type="checkbox" name="todo" value="Why not add a task ?">
-                            <span>&ensp;&ensp;<%= i.description %></span>
-                        </div>
-                        <footer class="due-date">
-                            <i class="far fa-calendar-alt"></i>
-                            <span>&ensp;<%= i.date %></span>
-                        </footer>
-                    </div>
-                    <div></div>
-                </li>
-
-            <%}%>
-		</ul>
+		
+		
 	</main>
+
+	<!-- Scripts -->
+	<script type="text/javascript" src="../jquery-3.5.1.js"></script>
+    <script type="text/javascript" src="../assets/js/home.js"></script>
 </body>

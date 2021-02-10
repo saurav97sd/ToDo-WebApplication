@@ -6,6 +6,7 @@ body{
 	background: rgb(240,17,10);
 	background: linear-gradient(129deg, rgba(240,17,10,1) 0%, rgba(233,114,2,1) 41%, rgba(241,213,87,1) 100%);
 	overflow-x: hidden;
+	background-attachment: fixed; /*To make linear gradient occupy full screen*/
 }
 
 /*styling header*/
@@ -23,7 +24,7 @@ header{
 }
 /*changing the color of placeholder*/
 ::placeholder{
-	color: lightgray;
+	color: rgb(22, 21, 21);
 	font-family: 'Lobster', cursive;
 }
 /*form div label, input{
@@ -48,7 +49,7 @@ form .description-container input{
 	border-style: none;
 	outline: none;
 	background: transparent;
-	color: lightgrey;
+	color: rgb(22, 21, 21);
 	font-family: 'Lobster', cursive;
 }
 
@@ -81,8 +82,11 @@ form label{
 	font-family: 'Lobster', cursive;
 	border-style: none;
 	outline: none;
-	color: lightgrey;
+	color: rgb(22, 21, 21);
 	background: transparent;
+}
+.category select option{
+	color: black;
 }
 .date{ /*Styling the date div*/
 	width: 50%;
@@ -100,7 +104,7 @@ form label{
 	font-family: 'Lobster', cursive;
 	border-style: none;
 	outline: none;
-	color: lightgrey;
+	color: rgb(22, 21, 21);
 	background: transparent;
 }
 
@@ -141,7 +145,7 @@ form .buttons{
 /*Styling the list*/
 .unordered-list{
 	list-style: none;
-	margin: 0 3rem;
+	margin: 2rem 3rem 0;
 	padding: 0;
 }
 .unordered-list .list-item{
@@ -168,5 +172,5 @@ form .buttons{
 	width: 100%;
 	display: flex;
 	padding-left: 3rem;
-	color: lightgrey;
+	color: rgb(22, 21, 21);
 }
