@@ -14,7 +14,7 @@ header{
 	font-family: 'Lemonada', cursive;
 	font-size: 3rem;
 	font-weight: bold;
-	margin: 2rem 0;
+	margin: 2rem 0 0;
 	padding-bottom: 1.6rem;
 	height: 4rem;
 	border-bottom: 1px solid white;
@@ -34,8 +34,8 @@ header{
 /*Styling the description container*/
 form .description-container{
 	height: 6rem;
-	margin: 1rem 0;
-	padding: 0 1rem;
+	/* margin: 1rem 0; */
+	padding: 1rem 1rem;
 	border-bottom: 1px solid white;
 	display: flex;
 	flex-direction: flex-start;
@@ -45,20 +45,23 @@ form .description-container input{
 	width: 100%;
 	height: 3rem;
 	font-size: 1.5rem;
-	margin-bottom: 1rem;
+	/* margin-bottom: 1rem; */
 	border-style: none;
 	outline: none;
 	background: transparent;
 	color: rgb(22, 21, 21);
 	font-family: 'Lobster', cursive;
 }
+form .description-container:focus-within{
+	background-color: rgb(187, 182, 184);
+}
 
 /*Styling the container of category and date*/
 form .category-date-container{
 	height: 6rem;
 	width: 100%;
-	margin: 1rem 0;
-	padding: 0 1rem;
+	margin-bottom: 1rem;
+	/* padding: 0 1rem; */
 	border-bottom: 1px solid white;
 	display: flex;
 	flex-direction: flex-start;
@@ -71,9 +74,11 @@ form label{
 	display: flex;
 	flex-direction: flex-start;
 	border-right: 1px solid white;
-	margin-bottom: 1rem;
-	padding-right: 1rem;
+	padding: 1rem;
 	flex-wrap: wrap;
+}
+.category:focus-within{
+	background-color: rgb(187, 182, 184);
 }
 .category select{
 	width: 100%;
@@ -93,9 +98,11 @@ form label{
 	display: flex;
 	flex-direction: flex-start;
 	flex-wrap: wrap;
-	margin-bottom: 1rem;
-	padding-left: 1rem;
-	padding-right: 4rem;
+	padding: 1rem 4rem 1rem 1rem;
+	/* padding-right: 4rem; */
+}
+.date:focus-within{
+	background-color: rgb(187, 182, 184);
 }
 .date input{
 	width: 100%;
@@ -166,9 +173,7 @@ form .buttons{
 .checkbox{
 	font-size: 1.3rem;
 }
-.checkbox input{
-	font-size: 2rem;
-}
+
 .due-date{
 	width: 100%;
 	display: flex;
@@ -184,10 +189,14 @@ form .buttons{
 	font-size: 1rem;
 	font-family: 'Times New Roman', Times, serif;
 	font-weight:100;
-	padding: 0.3rem 0.5rem;	
+	padding: 0.4rem 0.5rem;	
 }
 
-
+/* Strick when checkbocx is checked */
+.checked:checked + span{
+	text-decoration: line-through;
+	text-decoration-color: black;
+}
 
 /* color classes  for the categories*/
 #Home{
