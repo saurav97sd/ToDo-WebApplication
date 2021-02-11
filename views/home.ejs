@@ -1,101 +1,116 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<meta charset="UTF-8" /> 
-    <meta name="viewport" content= "width=device-width, initial-scale=1.0" /> 
-    <!-- Variable tiltle of the page -->
-	<title><%= title %></title> 
-	<link rel="preconnect" href="https://fonts.gstatic.com">
-	<link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Lobster&display=swap" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/css2?family=Lemonada&display=swap" rel="stylesheet">
-	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
-	<link rel="stylesheet" type="text/css" href="/css/Home.css">
-	
-</head>
-<body>
-	<header>
+	<head>
+		<meta charset="UTF-8" /> 
+		<meta name="viewport" content= "width=device-width, initial-scale=1.0" /> 
+		<!-- Variable tiltle of the page -->
+		<title><%= title %></title> 
+
+		<!-- Link for stylesheet along with fontawesome and google fonts-->
+		<link rel="preconnect" href="https://fonts.gstatic.com">
+		<link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Lobster&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=Lemonada&display=swap" rel="stylesheet">
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+		<link rel="stylesheet" type="text/css" href="/css/Home.css">
+		
+	</head>
+	<body>
 		<!-- Header of the web app -->
-		<i class="far fa-list-alt"></i>
-		<span>&ensp;TODO APP</span>
-	</header>
+		<header>
+			<i class="far fa-list-alt"></i>
+			<span>&ensp;TODO APP</span>
+		</header>
 
-	<main>
-		<!-- Form -->
-		<form action="/add/todo" method="POST">
-			<section>
-				<!-- Description Section -->
-				<div class="description-container">
-					<label for="description">DESCRIPTION</label>
-					<br>
-					<input type="text" name="description" id="description" autocomplete="off" placeholder="What do you neeed to do?" >
-				</div>
-				<!-- Choose category and date -->
-				<div class="category-date-container">
-					<div class="category">
-						<label for="category">CATEGORY</label>
-						<select id="category" name="category">
-							<option value="" selected>Choose a category</option>
-							<option value="Personal">Personal</option>
-							<option value="Home">Home</option>
-							<option value="Work">Work</option>
-							<option value="University">University</option>
-						</select>
-					</div>
-					
-					<div class="date">
-						<label>DUE DATE</label>
-						<input type="date" id="start" name="date" placeholder="dd/mm/yyyy" >
-					</div>
-					
-				</div>
-				<!-- Buttons -->
-				<div class="buttons">
-					<button type="submit" class="add-button" id="add">
-						<i class="fas fa-plus"></i>
-						<span>&nbsp;&nbsp;Add Task</span>
-					</button>
+		<!-- ------------------------------------------------------------------------------------ -->
 
-					<!-- Using formaction attribute to use two buttons differently -->
-					
-					<!-- Unorder list to show -->
-					<form action="/delete/todo" action="post">
-						<button type="submit" class="delete-button" formaction="./delete/todo" id="delete">
-							<i class="fas fa-trash"></i>
-							<span>&nbsp;&nbsp;Delete Task</span>
+		<!-- Main section of body -->
+		<main>
+			<!-- Form -->
+			<form action="/add/todo" method="POST">
+				<section>
+					<!-- Description Div -->
+					<div class="description-container">
+						<label for="description">DESCRIPTION</label>
+						<br>
+						<input type="text" name="description" id="description" autocomplete="off" placeholder="What do you neeed to do?" >
+					</div>
+
+					<!-- Choose category and date div -->
+					<div class="category-date-container">
+
+						<!-- Choose Category Div -->
+						<div class="category">
+							<label for="category">CATEGORY</label>
+							<!-- Select Category from options -->
+							<select id="category" name="category">
+								<option value="" selected>Choose a category</option>
+								<option value="Personal">Personal</option>
+								<option value="Home">Home</option>
+								<option value="Work">Work</option>
+								<option value="University">University</option>
+							</select>
+						</div>
+						
+						<!-- Choose Date Div -->
+						<div class="date">
+							<label>DUE DATE</label>
+							<input type="date" id="start" name="date" placeholder="dd/mm/yyyy" >
+						</div>
+					</div>
+
+					<!-- -------------------------------------------------------------------------------- -->
+
+					<!-- Div for buttons and unordered list -->
+					<div class="mid">
+
+						<!-- Add Button -->
+						<button type="submit" class="add-button" id="add">
+							<i class="fas fa-plus"></i>
+							<span>&nbsp;&nbsp;Add Task</span>
 						</button>
 
-						<ul class="unordered-list">
-							<%for(let i of todo){%>
-				
-								<li class="list-item">
-									<div class="list-content">
-										<div class="checkbox">
-											<input type="checkbox" class="checked" name="todo" id="<%= i._id %>" value="<%= i._id %>">
-											<span>&ensp;&ensp;<%= i.description %></span>
+						<!-- Form for delete button and the unordered list -->
+						<form action="/delete/todo" action="post">
+
+							<!-- Delete Button -->
+							<!-- Using formaction attribute to use two buttons differently -->
+							<button type="submit" class="delete-button" formaction="./delete/todo" id="delete">
+								<i class="fas fa-trash"></i>
+								<span>&nbsp;&nbsp;Delete Task</span>
+							</button>
+
+							<!-- Unorder list to show -->
+							<ul class="unordered-list">
+
+								<%for(let i of todo){%>
+
+									<li class="list-item">
+										<div class="list-content">
+											<div class="checkbox">
+												<input type="checkbox" class="checked" name="todo" id="<%= i._id %>" value="<%= i._id %>">
+												<span>&ensp;&ensp;<%= i.description %></span>
+											</div>
+											<footer class="due-date">
+												<i class="far fa-calendar-alt"></i>
+												<span>&ensp;<%= i.date %></span>
+											</footer>
 										</div>
-										<footer class="due-date">
-											<i class="far fa-calendar-alt"></i>
-											<span>&ensp;<%= i.date %></span>
-										</footer>
-									</div>
-									<div class="category-display" id="<%= i.category %>">
-										<%= i.category %>
-									</div>
-								</li>
-				
-							<%}%>
-						</ul>
-					</form>
+										<div class="category-display" id="<%= i.category %>">
+											<%= i.category %>
+										</div>
+									</li>
 					
-				</div>
-			</section>
-		</form>
+								<%}%>
 
-		
-		
-	</main>
+							</ul>
+						</form>
+					</div>
+				</section>
+			</form>
+		</main>
 
-	<!-- Scripts -->
-	<script type="text/javascript" src="../jquery-3.5.1.js"></script>
-    <script type="text/javascript" src="../assets/js/home.js"></script>
-</body>
+		<!-- Scripts along with JQuery-->
+		<script type="text/javascript" src="../jquery-3.5.1.js"></script>
+		<script type="text/javascript" src="../assets/js/home.js"></script>
+	</body>
+</html>

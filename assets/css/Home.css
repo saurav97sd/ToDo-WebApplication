@@ -9,7 +9,9 @@ body{
 	background-attachment: fixed; /*To make linear gradient occupy full screen*/
 }
 
+
 /* --------------------------------------------------------------------------------------- */
+
 
 /*styling header*/
 header{
@@ -25,7 +27,9 @@ header{
 	align-items: center;
 }
 
+
 /* -------------------------------------------------------------------------------------- */
+
 
 /*Styling the description container*/
 form .description-container{
@@ -58,6 +62,7 @@ form .description-container:focus-within{
 	background: rgb(249,170,58);
 	background: linear-gradient(129deg, rgba(249,170,58,1) 0%, rgba(251,248,116,1) 41%, rgba(220,247,103,1) 100%);
 }
+
 
 /* --------------------------------------------------------------------------------------- */
 
@@ -130,11 +135,12 @@ form label{
 
 /* ------------------------------------------------------------------------------------------- */
 
+
 /*Styling the buttons of the form*/
-form .buttons{
+form .mid{
 	margin: 3rem 0;
 }
-.buttons .add-button{
+.mid .add-button{
 	width: 10rem;
 	height: 3rem;
 	background-color: #444444;
@@ -148,7 +154,7 @@ form .buttons{
 	cursor: pointer;
 	outline: none;
 }
-.buttons .delete-button{
+.mid .delete-button{
 	width: 10rem;
 	height: 3rem;
 	background-color: #ee351e;
@@ -162,7 +168,9 @@ form .buttons{
 	outline: none;
 }
 
+
 /* ---------------------------------------------------------------------------------------------- */
+
 
 /*Styling the unordered list*/
 .unordered-list{
@@ -216,7 +224,9 @@ form .buttons{
 	text-decoration-color: black;
 }
 
+
 /* --------------------------------------------------------------------------------------------------- */
+
 
 /* color classes  for the categories*/
 #Home{
