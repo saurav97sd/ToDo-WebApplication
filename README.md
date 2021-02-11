@@ -6,8 +6,7 @@ To complete this web application i used :
    - Node.js is an open-source, cross-platform, back-end JavaScript runtime environment that runs on the Chrome V8 engine and executes JavaScript code outside a web browser
 
 2. Express.js 
-   -Express.js, or simply Express, is a back end web application framework for Node.js.
-   -I used express to create my server and run it.
+   -Express.js, or simply Express, is a back end web application framework for Node.js. I used express to create my server and run it.
 
 3. EJS
    - I used EJS as my templete engine which allowed me to generate full-blown HTML pages which certainly enables a "proper front-end".
