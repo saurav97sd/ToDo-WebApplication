@@ -1,3 +1,7 @@
+/* Assigning minwidth to html */
+html{
+	min-width: 245px;
+}
 /*Removing the default margin and getting all text at center*/
 body{
 	color: white;
@@ -115,7 +119,7 @@ form label{
 	flex-direction: flex-start;
 	flex-wrap: wrap;
 	padding: 1rem 4rem 1rem 1rem;
-	/* padding-right: 4rem; */
+	box-sizing: border-box;
 }
 .date:focus-within{
 	background: rgb(249,170,58);
@@ -178,6 +182,7 @@ form .mid{
 	margin: 2rem 18rem 0;
 	padding: 0;
 }
+
 
 /* Rules for list items*/
 .unordered-list .list-item{
@@ -242,4 +247,151 @@ form .mid{
 }
 #University{
 	background-color: rgb(255, 255, 0);
+}
+
+
+/* ----------------------------------------------------------------------------------------------------- */
+
+
+/* Making the design responsive */
+@media screen and (max-width: 1125px){
+	.unordered-list {
+		list-style: none;
+		margin: 2rem 8rem 0;
+		padding: 0;
+	}
+}
+@media screen and (max-width: 1029px){
+	.unordered-list {
+		list-style: none;
+		margin: 2rem 2rem 0;
+		padding: 0;
+	}
+}
+@media screen and (max-width: 837px){
+	.unordered-list {
+		list-style: none;
+		margin: 2rem 2rem 0;
+		padding: 0;
+	}
+	.unordered-list .list-item {
+		border-top: 1px solid white;
+		height: 4rem;
+		padding: 1rem 0.5rem;
+		display: flex;
+		/* flex-wrap: wrap; */
+		justify-content: space-between;
+		align-items: center;
+		font-family: 'Lobster', cursive;
+	}
+	.list-content{
+		width: 80%;
+		display: flex;
+		flex-direction: flex-start;
+		flex-wrap: wrap;
+	}
+}
+@media screen and (max-width: 452px){
+	.unordered-list {
+		list-style: none;
+		margin: 2rem 0 0;
+		padding: 0;
+	}
+	
+}
+@media screen and (max-width: 388px){
+	header{
+		font-size: 2rem;
+		margin-top: 1.2rem;
+		padding-bottom: 1rem;
+	}
+	.unordered-list {
+		list-style: none;
+		margin: 2rem 0 0;
+		padding: 0;
+	}
+	.unordered-list .list-item {
+		border-top: 1px solid white;
+		height: 8rem;
+		padding: 1rem 0.5rem;
+		display: flex;
+		/* flex-wrap: wrap; */
+		justify-content: center;
+		align-items: center;
+		font-family: 'Lobster', cursive;
+		font-size:1rem;
+	}
+	.list-content{
+		width: 100%;
+		display: flex;
+		flex-direction: flex-start;
+		flex-wrap: wrap;
+	}
+	.category-display{
+		color: black;
+		margin: 0.5rem 0;
+		border-radius:20px;
+		font-size: 1rem;
+		font-family: 'Times New Roman', Times, serif;
+		font-weight:100;
+		padding: 0.4rem 0.5rem;	
+	}
+	.mid .add-button{
+		width: 6rem;
+		height: 2rem;
+		font-size:0.6rem;
+	}
+	.mid .delete-button{
+		width: 6rem;
+		height: 2rem;
+		font-size:0.6rem;
+	}
+
+	/* The from section */
+	form label{
+		font-size: 0.7rem;
+	}
+	form .description-container{
+		height: 4rem;
+		/* margin: 1rem 0; */
+		padding: 0.5rem 0.5rem;
+		
+	}
+	form .description-container input{ /*Rules for the input type text*/
+		width: 100%;
+		height: 2.5rem;
+		font-size: 1.3rem;
+	}
+	form .category-date-container{
+		height: 4rem;
+	}
+	.category{
+		padding: 0.5rem;
+	}
+	.category select{
+		width: 100%;
+		height: 2.5rem;
+		font-size: 1rem;
+	}
+	.date{
+		padding: 0.5rem 2rem 0.5rem 0.5rem;
+	}
+	.date input{
+		width: 100%;
+		height: 2.5rem;
+		font-size: 1rem;
+	}
+}
+@media screen and (max-width: 289px){
+	header{
+		font-size: 2rem;
+	}
+	.category-display{
+		color: black;
+		margin: 0.2rem 0;
+		font-size: 0.8rem;
+	}
+	.checkbox{
+		font-size: 1rem;
+	}
 }
