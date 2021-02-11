@@ -9,6 +9,8 @@ body{
 	background-attachment: fixed; /*To make linear gradient occupy full screen*/
 }
 
+/* --------------------------------------------------------------------------------------- */
+
 /*styling header*/
 header{
 	font-family: 'Lemonada', cursive;
@@ -22,14 +24,8 @@ header{
 	justify-content: center;
 	align-items: center;
 }
-/*changing the color of placeholder*/
-::placeholder{
-	color: rgb(22, 21, 21);
-	font-family: 'Lobster', cursive;
-}
-/*form div label, input{
-	display: block;
-}*/
+
+/* -------------------------------------------------------------------------------------- */
 
 /*Styling the description container*/
 form .description-container{
@@ -41,7 +37,7 @@ form .description-container{
 	flex-direction: flex-start;
 	flex-wrap: wrap;
 }
-form .description-container input{
+form .description-container input{ /*Rules for the input type text*/
 	width: 100%;
 	height: 3rem;
 	font-size: 1.5rem;
@@ -52,9 +48,19 @@ form .description-container input{
 	color: rgb(22, 21, 21);
 	font-family: 'Lobster', cursive;
 }
-form .description-container:focus-within{
-	background-color: rgb(187, 182, 184);
+/*changing the color of placeholder of the input*/
+::placeholder{
+	color: rgb(22, 21, 21);
+	font-family: 'Lobster', cursive;
 }
+/* Rule when the description div is focused */
+form .description-container:focus-within{
+	background: rgb(249,170,58);
+	background: linear-gradient(129deg, rgba(249,170,58,1) 0%, rgba(251,248,116,1) 41%, rgba(220,247,103,1) 100%);
+}
+
+/* --------------------------------------------------------------------------------------- */
+
 
 /*Styling the container of category and date*/
 form .category-date-container{
@@ -69,7 +75,9 @@ form .category-date-container{
 form label{
 	font-weight: bold;
 }
-.category{ /*Styling the category div*/
+
+/*Styling the category div*/
+.category{ 
 	width: 50%;
 	display: flex;
 	flex-direction: flex-start;
@@ -78,7 +86,8 @@ form label{
 	flex-wrap: wrap;
 }
 .category:focus-within{
-	background-color: rgb(187, 182, 184);
+	background: rgb(249,170,58);
+	background: linear-gradient(129deg, rgba(249,170,58,1) 0%, rgba(251,248,116,1) 41%, rgba(220,247,103,1) 100%);
 }
 .category select{
 	width: 100%;
@@ -93,7 +102,9 @@ form label{
 .category select option{
 	color: black;
 }
-.date{ /*Styling the date div*/
+
+/*Styling the date div*/
+.date{ 
 	width: 50%;
 	display: flex;
 	flex-direction: flex-start;
@@ -102,7 +113,8 @@ form label{
 	/* padding-right: 4rem; */
 }
 .date:focus-within{
-	background-color: rgb(187, 182, 184);
+	background: rgb(249,170,58);
+	background: linear-gradient(129deg, rgba(249,170,58,1) 0%, rgba(251,248,116,1) 41%, rgba(220,247,103,1) 100%);
 }
 .date input{
 	width: 100%;
@@ -116,7 +128,9 @@ form label{
 }
 
 
-/*Styling the button*/
+/* ------------------------------------------------------------------------------------------- */
+
+/*Styling the buttons of the form*/
 form .buttons{
 	margin: 3rem 0;
 }
@@ -148,13 +162,16 @@ form .buttons{
 	outline: none;
 }
 
+/* ---------------------------------------------------------------------------------------------- */
 
-/*Styling the list*/
+/*Styling the unordered list*/
 .unordered-list{
 	list-style: none;
 	margin: 2rem 18rem 0;
 	padding: 0;
 }
+
+/* Rules for list items*/
 .unordered-list .list-item{
 	border-top: 1px solid white;
 	height: 4rem;
@@ -170,10 +187,11 @@ form .buttons{
 	flex-direction: flex-start;
 	flex-wrap: wrap;
 }
+
+/* Rules for checkbox */
 .checkbox{
 	font-size: 1.3rem;
 }
-
 .due-date{
 	width: 100%;
 	display: flex;
@@ -182,6 +200,7 @@ form .buttons{
 	color: rgb(22, 21, 21);
 }
 
+/* Rules for category to be shown along with the checkbox */
 .category-display{
 	color: black;
 	/* margin-right: 3rem; */
@@ -191,12 +210,13 @@ form .buttons{
 	font-weight:100;
 	padding: 0.4rem 0.5rem;	
 }
-
 /* Strick when checkbocx is checked */
 .checked:checked + span{
 	text-decoration: line-through;
 	text-decoration-color: black;
 }
+
+/* --------------------------------------------------------------------------------------------------- */
 
 /* color classes  for the categories*/
 #Home{
