@@ -1,4 +1,5 @@
 // Creating temporary array to access from html page
+//It's of no use after we initialize the database
 module.exports.todo = [
     {
         description: 'Why dont add something ?',
